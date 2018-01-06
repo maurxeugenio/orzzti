@@ -20,9 +20,8 @@ var Contact = React.createClass({
         fetch('https://maurxdev.pythonanywhere.com/contact/', {
             method: 'POST',
             headers:{
-                'access-control-allow-origin':'*',
-                'access-control-allow-headers': '*',
-                'content-type': 'application/json'
+                'Access-Control-Allow-Origin':'*'
+                'Content-Type': 'application/json'
                 },
             body: JSON.stringify(this.state),
         }).then(function (data) {
