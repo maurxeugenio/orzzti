@@ -19,9 +19,9 @@ var Contact = React.createClass({
         var _this = this;
         fetch('https://maurxdev.pythonanywhere.com/contact/', {
             method: 'POST',
-            mode: 'no-cors'
+
             headers:{
-                'Access-Control-Allow-Origin':'*'
+                'Access-Control-Allow-Origin':'*',
                 'Content-Type': 'application/json'
                 },
             body: JSON.stringify(this.state),
