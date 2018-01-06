@@ -21,6 +21,7 @@ var Contact = React.createClass({
             method: 'POST',
             headers:{
                 'Access-control-Allow-Origin':'*',
+                'Access-Control-Allow-Headers': '*',
                 'content-type': 'application/json'
                 },
             body: JSON.stringify(this.state),
