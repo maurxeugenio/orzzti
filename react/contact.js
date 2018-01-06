@@ -2,6 +2,7 @@ var Contact = React.createClass({
     componentWillMount() {
         this.state = {
             sentIs: false,
+            loading: false,
         };
     },
 
@@ -16,24 +17,27 @@ var Contact = React.createClass({
     },
 
     handleClick(){
+        this.setState({
+            loading: true,
+        })
         var _this = this;
-        fetch('https://maurxdev.pythonanywhere.com/contact/', {
+        var url = 'https://maurxdev.pythonanywhere.com/contact/'
+        var local_url = 'http://localhost:8000/contact/'
+
+        fetch(url, {
             method: "POST",
-
             headers:{
-                 "content-type": "application/json",
-                },
+                "content-type": "application/json",
+            },
             body: JSON.stringify(this.state),
-        }).then(function (data) {
-
-            if (data.status === 201){
-                return _this.setState({
-                    sentIs: true,
-                })
+        })
+        .then(function (data) {
+            if (data.status==201) {
+                _this.setState({loading: false, sentIs: true})
             }else{
-                alert('deu errado')
+                _this.setState({loading: false, sentIs: false})
             }
-        });
+        })
     },
 
     newMessageClick(){
@@ -42,9 +46,56 @@ var Contact = React.createClass({
         })
     },
     render: function () {
-        if (this.state.sentIs==false) {
+        if (this.state.loading==true) {
             return(
-                <div className="col s12 l6">
+                <div className="col s12 l6 m12 center">
+                <div className="preloader-wrapper big active">
+                <div className="spinner-layer spinner-blue">
+                <div className="circle-clipper left">
+                <div className="circle"></div>
+                </div><div className="gap-patch">
+                <div className="circle"></div>
+                </div><div className="circle-clipper right">
+                <div className="circle"></div>
+                </div>
+                </div>
+
+                <div className="spinner-layer spinner-red">
+                <div className="circle-clipper left">
+                <div className="circle"></div>
+                </div><div className="gap-patch">
+                <div className="circle"></div>
+                </div><div className="circle-clipper right">
+                <div className="circle"></div>
+                </div>
+                </div>
+
+                <div className="spinner-layer spinner-yellow">
+                <div className="circle-clipper left">
+                <div className="circle"></div>
+                </div><div className="gap-patch">
+                <div className="circle"></div>
+                </div><div className="circle-clipper right">
+                <div className="circle"></div>
+                </div>
+                </div>
+
+                <div className="spinner-layer spinner-green">
+                <div className="circle-clipper left">
+                <div className="circle"></div>
+                </div><div className="gap-patch">
+                <div className="circle"></div>
+                </div><div className="circle-clipper right">
+                <div className="circle"></div>
+                </div>
+                </div>
+                </div>
+                </div>
+            )
+        }else{
+            if (this.state.sentIs==false) {
+                return(
+                    <div className="col s12 l6 m12">
                     <h5 className="light">Entre em contato</h5>
                     <div className="input-field col s12">
                     <i className="material-icons prefix">account_circle</i>
@@ -67,15 +118,16 @@ var Contact = React.createClass({
                     <label htmlFor="icon_prefix2">Sua mensagem</label>
                     </div>
                     <button onClick={this.handleClick} className="btn-large indigo darken-3 waves-effect" name="button">enviar <i className="material-icons right">send</i></button>
-                </div>
-            );
-        }else{
-            return(
-                <div className="col s6 center">
+                    </div>
+                );
+            }else{
+                return(
+                    <div className="col s12 l6 m12 center align-center">
                     <p className="justify">Obrigado! A sua mensagem foi enviada, em breve entraremos em contato.</p>
                     <button onClick={this.newMessageClick} className="waves-effect btn-large green">nova menssagem</button>
-                </div>
-            );
+                    </div>
+                );
+            }
         }
     }
 });
