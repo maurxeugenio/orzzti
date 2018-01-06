@@ -17,7 +17,7 @@ var Contact = React.createClass({
 
     handleClick(){
         var _this = this;
-        fetch('http://maurxdev.pythonanywhere.com/contact/', {
+        fetch('https://maurxdev.pythonanywhere.com/contact/', {
             method: 'POST',
             headers:{'content-type': 'application/json'},
             body: JSON.stringify(this.state),
