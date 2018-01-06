@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.parallax-container {
+    height: 600px !important;
+}
+
+.btn-large{
+    border-radius: 120px !important;
+}
+
+.justify{
+    text-align: justify;
+}
+
+.mostruario{
+    border-radius: 10px;
+}
+
+.icon-block .material-icons{
+    font-size: inherit;
+}
+
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: 150px;
+}
+
+.avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.input-field input:focus + label {
+    color: #283593 !important;
+}
+.input-field textarea:focus + label {
+    color: #283593 !important;
+}
+
+
+.input-field .prefix.active {
+    color: #283593 !important;
+}
