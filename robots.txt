@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /search
+Disallow: /search/about
+Disallow: /search/howsearchworks
+Disallow: /sdch
+Disallow: /groups
+Disallow: /index.html?
+Disallow: /?
