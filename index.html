@@ -17,7 +17,7 @@
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
     <meta property="og:description" content="
-    A Orizzonti é uma software house que atua com projetos digitais. Trabalhamos
+    A Orizzonti é uma software house que desenvolve projetos digitais. Trabalhamos
     com sites, sistemas web, e-commerce, blogs e desenvolvimento mobile. É uma empresa
     Valadarense criada na comunidade Rio Doce Valley." />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -120,9 +120,9 @@
                 </div>
 
             </div>
-             <div class="center">
-                    <a href="#servicos" class="btn-large indigo waves-effect">nossos serviços</a>
-                </div>
+            <div class="center">
+                <a href="#servicos" class="btn-large indigo waves-effect">nossos serviços</a>
+            </div>
         </div>
         <div class="divider"></div>
         <div class="section white">
@@ -224,6 +224,37 @@
         <script src="build/react.js"></script>
         <script src="build/react-dom.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-        <script type="text/babel" src="react/contact.js"></script>
+        <script type="text/babel" src="react/build/contact.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72795332-5"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-72795332-5');
+        </script>
+
+        <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '321858731639507',
+                xfbml      : true,
+                version    : 'v2.11'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+
     </body>
     </html>
