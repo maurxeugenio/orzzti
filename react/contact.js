@@ -97,7 +97,7 @@ var Contact = React.createClass({
                 return(
                     <div className='col s12 l6 m12'>
                     <h5 className='light'>Entre em contato</h5>
-                    
+
                     <div className='input-field col s12'>
                     <i className='material-icons prefix'>account_circle</i>
                     <input onChange={this.handleInputChange} id='icon_prefix' name='name' type='text' placeholder='Nome completo' className='validate' data-length='40'/>

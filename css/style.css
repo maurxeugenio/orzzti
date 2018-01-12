@@ -44,3 +44,7 @@ a.anchor {
 .input-field .prefix.active {
     color: #283593 !important;
 }
+
+.pre-load{
+    height: 300px;
+}

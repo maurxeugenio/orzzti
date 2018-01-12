@@ -48,7 +48,7 @@ var Contact = React.createClass({
         if (this.state.loading == true) {
             return React.createElement(
                 'div',
-                { className: 'col s12 l6 m12 center' },
+                { className: 'col s12 l6 m12 pre-load valign-wrapper' },
                 React.createElement(
                     'div',
                     { className: 'preloader-wrapper big active' },
