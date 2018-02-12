@@ -110,12 +110,12 @@ var Contact = React.createClass({
                     </div>
                     <div className='input-field col s12'>
                     <i className='material-icons prefix'>subject</i>
-                    <input onChange={this.handleInputChange} id='icon_email' name='subject' type='text' placeholder='Dúvidas, orçamentoes...' data-length='40' />
+                    <input onChange={this.handleInputChange} id='icon_email' name='subject' type='text' placeholder='Dúvidas, orçamentos...' data-length='40' />
                     <label htmlFor='icon_email'>Assunto</label>
                     </div>
                     <div className='input-field col s12'>
                     <i className="material-icons prefix">message</i>
-                    <textarea onChange={this.handleInputChange} id='icon_prefix2' name='message' className='materialize-textarea' placeholder='sua mensage...' data-length='300'></textarea>
+                    <textarea onChange={this.handleInputChange} id='icon_prefix2' name='message' className='materialize-textarea' placeholder='sua mensagem...' data-length='300'></textarea>
                     <label htmlFor='icon_prefix2'>Sua mensagem</label>
                     </div>
                     <button onClick={this.handleClick} className='btn-large indigo darken-3 waves-effect' name='button'>enviar <i className='material-icons right'>send</i></button>
@@ -125,7 +125,7 @@ var Contact = React.createClass({
                 return(
                     <div className="col s12 l6 m12 center align-center">
                     <p className="justify">Obrigado! A sua mensagem foi enviada, em breve entraremos em contato.</p>
-                    <button onClick={this.newMessageClick} className="waves-effect btn-large green">nova menssagem</button>
+                    <button onClick={this.newMessageClick} className="waves-effect btn-large green">nova mensagem</button>
                     </div>
                 );
             }

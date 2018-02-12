@@ -178,7 +178,7 @@ var Contact = React.createClass({
                             { className: 'material-icons prefix' },
                             'subject'
                         ),
-                        React.createElement('input', { onChange: this.handleInputChange, id: 'icon_email', name: 'subject', type: 'text', placeholder: 'D\xFAvidas, or\xE7amentoes...', 'data-length': '40' }),
+                        React.createElement('input', { onChange: this.handleInputChange, id: 'icon_email', name: 'subject', type: 'text', placeholder: 'D\xFAvidas, or\xE7amentos...', 'data-length': '40' }),
                         React.createElement(
                             'label',
                             { htmlFor: 'icon_email' },
@@ -193,7 +193,7 @@ var Contact = React.createClass({
                             { className: 'material-icons prefix' },
                             'message'
                         ),
-                        React.createElement('textarea', { onChange: this.handleInputChange, id: 'icon_prefix2', name: 'message', className: 'materialize-textarea', placeholder: 'sua mensage...', 'data-length': '300' }),
+                        React.createElement('textarea', { onChange: this.handleInputChange, id: 'icon_prefix2', name: 'message', className: 'materialize-textarea', placeholder: 'sua mensagem...', 'data-length': '300' }),
                         React.createElement(
                             'label',
                             { htmlFor: 'icon_prefix2' },
@@ -223,7 +223,7 @@ var Contact = React.createClass({
                     React.createElement(
                         'button',
                         { onClick: this.newMessageClick, className: 'waves-effect btn-large green' },
-                        'nova menssagem'
+                        'nova mensagem'
                     )
                 );
             }
